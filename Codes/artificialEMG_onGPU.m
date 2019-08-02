@@ -19,7 +19,7 @@ a = log(30)/M;
 recthresh = zeros(1,M);           % recruit all
 %recthresh = exp(a * [1:M]);      % recruit with exponential increase
 lambdamin = 0;     % in [Hz]
-lambdamax = 100;    % in [Hz]
+lambdamax = 100;   % in [Hz]
 g = 1;             % gain between neural drive and MUAP firing rate
 ndmax = recthresh(end)*g + lambdamax;   % maximum neural drive
 % define neural drive function
@@ -28,6 +28,7 @@ ndmax = recthresh(end)*g + lambdamax;   % maximum neural drive
 
 % ramp function
 neuraldrive = linspace(0,1,N)*ndmax;
+
 
 % stepwise increase
 %steps = 10;
